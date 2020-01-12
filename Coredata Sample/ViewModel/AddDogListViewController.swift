@@ -17,7 +17,6 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
     @IBOutlet weak var ownerNameTxt : UITextField!
     @IBOutlet weak var dogDescriptionTxt : UITextField!
     @IBOutlet weak var selectImg : UIImageView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

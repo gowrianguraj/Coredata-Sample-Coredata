@@ -23,6 +23,7 @@ class DBManager {
         entity.setValue(dogDescription, forKeyPath: "dogDescription")
         entity.setValue(dogImage, forKeyPath: "dogImage")
         do {
+            
             try context.save()
         
         } catch {

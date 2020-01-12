@@ -62,9 +62,6 @@ class Coredata_SampleTests: XCTestCase {
         let imageUrl = URL(string: imageUrlString)!
         guard let imageData = try? Data(contentsOf: imageUrl) else { return }
         let person1 = dbManager.addImageHistory(dogName: dogName, ownername: ownername, dogDescription: dogDescription, dogImage: imageData)
-      
-        /*Asserts that an expression is not nil.
-         Generates a failure when expression == nil.*/
         XCTAssertNotNil(person1)
         
     }

@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-
 }
     
     //MARK: - Incase of future implementation to clear the tableview list
