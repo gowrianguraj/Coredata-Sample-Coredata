@@ -1,0 +1,6 @@
+framework module Pods_Coredata_Sample_Coredata_SampleUITests {
+  umbrella header "Pods-Coredata Sample-Coredata SampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
