@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5616536023CD130200713274 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616535F23CD130200713274 /* PopUpViewController.swift */; };
 		5618872223CAD7DA00D3D61F /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5618872123CAD7DA00D3D61F /* SF-UI-Display-Medium.otf */; };
 		5653704D23C8F11900466201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653704C23C8F11900466201 /* AppDelegate.swift */; };
 		5653704F23C8F11900466201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653704E23C8F11900466201 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		29533917634B70E53A313305 /* Pods-Coredata SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coredata SampleTests.release.xcconfig"; path = "Target Support Files/Pods-Coredata SampleTests/Pods-Coredata SampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F704B9941A0B5033F894C7D /* Pods_Coredata_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coredata_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7041F9AFB43CBC0A90B12F /* Pods_Coredata_Sample_Coredata_SampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coredata_Sample_Coredata_SampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5616535F23CD130200713274 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		5618872123CAD7DA00D3D61F /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
 		5653704923C8F11900466201 /* Coredata Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coredata Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5653704C23C8F11900466201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 				01FE49109DF88B2776A3C749 /* Pods-Coredata SampleTests.debug.xcconfig */,
 				29533917634B70E53A313305 /* Pods-Coredata SampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -221,6 +222,7 @@
 			children = (
 				5653707D23C8F5EA00466201 /* AddDogListViewController.swift */,
 				5653704E23C8F11900466201 /* ViewController.swift */,
+				5616535F23CD130200713274 /* PopUpViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -474,6 +476,7 @@
 				56BFB45423C923BD00BE7430 /* DBManager.swift in Sources */,
 				5653704D23C8F11900466201 /* AppDelegate.swift in Sources */,
 				5653705523C8F11900466201 /* Coredata_Sample.xcdatamodeld in Sources */,
+				5616536023CD130200713274 /* PopUpViewController.swift in Sources */,
 				5653707E23C8F5EA00466201 /* AddDogListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -71,4 +71,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         tablecell.userObj = (userArray[indexPath.row])
         return tablecell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
+        popOverVC.details = (userArray[indexPath.row])
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+        
+    }
 }
