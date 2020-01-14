@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		5616536023CD130200713274 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616535F23CD130200713274 /* PopUpViewController.swift */; };
 		5618872223CAD7DA00D3D61F /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5618872123CAD7DA00D3D61F /* SF-UI-Display-Medium.otf */; };
+		5629131923CE37EF008ECF28 /* DBManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629131723CE37EF008ECF28 /* DBManagerTest.swift */; };
 		5653704D23C8F11900466201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653704C23C8F11900466201 /* AppDelegate.swift */; };
 		5653704F23C8F11900466201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653704E23C8F11900466201 /* ViewController.swift */; };
 		5653705223C8F11900466201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5653705023C8F11900466201 /* Main.storyboard */; };
 		5653705523C8F11900466201 /* Coredata_Sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5653705323C8F11900466201 /* Coredata_Sample.xcdatamodeld */; };
 		5653705723C8F11A00466201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5653705623C8F11A00466201 /* Assets.xcassets */; };
 		5653705A23C8F11B00466201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5653705823C8F11B00466201 /* LaunchScreen.storyboard */; };
-		5653706523C8F11B00466201 /* Coredata_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653706423C8F11B00466201 /* Coredata_SampleTests.swift */; };
-		5653707023C8F11B00466201 /* Coredata_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653706F23C8F11B00466201 /* Coredata_SampleUITests.swift */; };
+		5653706523C8F11B00466201 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653706423C8F11B00466201 /* ViewControllerTests.swift */; };
+		5653707023C8F11B00466201 /* AddDogListVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653706F23C8F11B00466201 /* AddDogListVCUITests.swift */; };
 		5653707E23C8F5EA00466201 /* AddDogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653707D23C8F5EA00466201 /* AddDogListViewController.swift */; };
 		5653708023C905A100466201 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5653707F23C905A000466201 /* CustomTableViewCell.swift */; };
 		566F802F23C9297B004271F9 /* DogList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F802D23C9297B004271F9 /* DogList+CoreDataClass.swift */; };
@@ -53,6 +54,7 @@
 		4D7041F9AFB43CBC0A90B12F /* Pods_Coredata_Sample_Coredata_SampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coredata_Sample_Coredata_SampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5616535F23CD130200713274 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		5618872123CAD7DA00D3D61F /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		5629131723CE37EF008ECF28 /* DBManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerTest.swift; sourceTree = "<group>"; };
 		5653704923C8F11900466201 /* Coredata Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coredata Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5653704C23C8F11900466201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5653704E23C8F11900466201 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +64,10 @@
 		5653705923C8F11B00466201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5653705B23C8F11B00466201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5653706023C8F11B00466201 /* Coredata SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coredata SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5653706423C8F11B00466201 /* Coredata_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coredata_SampleTests.swift; sourceTree = "<group>"; };
+		5653706423C8F11B00466201 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		5653706623C8F11B00466201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5653706B23C8F11B00466201 /* Coredata SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coredata SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5653706F23C8F11B00466201 /* Coredata_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coredata_SampleUITests.swift; sourceTree = "<group>"; };
+		5653706F23C8F11B00466201 /* AddDogListVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogListVCUITests.swift; sourceTree = "<group>"; };
 		5653707123C8F11B00466201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5653707D23C8F5EA00466201 /* AddDogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogListViewController.swift; sourceTree = "<group>"; };
 		5653707F23C905A000466201 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,7 +186,8 @@
 		5653706323C8F11B00466201 /* Coredata SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				5653706423C8F11B00466201 /* Coredata_SampleTests.swift */,
+				5629131723CE37EF008ECF28 /* DBManagerTest.swift */,
+				5653706423C8F11B00466201 /* ViewControllerTests.swift */,
 				5653706623C8F11B00466201 /* Info.plist */,
 			);
 			path = "Coredata SampleTests";
@@ -193,7 +196,7 @@
 		5653706E23C8F11B00466201 /* Coredata SampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5653706F23C8F11B00466201 /* Coredata_SampleUITests.swift */,
+				5653706F23C8F11B00466201 /* AddDogListVCUITests.swift */,
 				5653707123C8F11B00466201 /* Info.plist */,
 			);
 			path = "Coredata SampleUITests";
@@ -485,7 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5653706523C8F11B00466201 /* Coredata_SampleTests.swift in Sources */,
+				5653706523C8F11B00466201 /* ViewControllerTests.swift in Sources */,
+				5629131923CE37EF008ECF28 /* DBManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5653707023C8F11B00466201 /* Coredata_SampleUITests.swift in Sources */,
+				5653707023C8F11B00466201 /* AddDogListVCUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

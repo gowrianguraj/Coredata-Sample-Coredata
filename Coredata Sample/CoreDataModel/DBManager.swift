@@ -23,27 +23,12 @@ class DBManager {
         entity.setValue(dogDescription, forKeyPath: "dogDescription")
         entity.setValue(dogImage, forKeyPath: "dogImage")
         do {
-            
             try context.save()
         
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    //MARK: - Clear all the data from Coredata stack
-    func clearHistory() -> Bool {
-        let context = appDelegate.persistentContainer.viewContext
-        let request = DogList.fetchRequest()
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
-        do {
-            try appDelegate.persistentContainer.persistentStoreCoordinator.execute(deleteRequest, with: context)
-            // userArray?.removeAll()
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
+
     }
 
 }

@@ -21,7 +21,8 @@ class ViewController: UIViewController {
             }
         }
     }
-     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,10 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView?.reloadData()
+        DispatchQueue.main.async {
+            self.getValues()
+            self.tableView?.reloadData()
+        }
     }
     
     //MARK : - Fetch the coredata values
@@ -44,14 +48,8 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
 }
-    
-    //MARK: - Incase of future implementation to clear the tableview list
-    @IBAction func clearTableList(_sender :UIButton) {
-        let dbManager = DBManager()
-        if dbManager.clearHistory() {
-            userArray?.removeAll()
-        }
     }
+    
 }
 //MARK: - TableviewDelegates,Datasource
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
@@ -61,7 +59,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
       return userArray.count
     }
     
@@ -80,6 +77,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParent: self)
-        
+
     }
 }

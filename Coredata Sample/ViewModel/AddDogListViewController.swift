@@ -37,8 +37,6 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
         guard let dogdescription = dogDescriptionTxt.text else {
             return
         }
-       
-      // let jpg = selectImg.image?.jpegData(compressionQuality: 0.75) // If image in jpeg format
         guard  let png = selectImg.image?.pngData() else {
             return
         }
@@ -46,12 +44,7 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
        let dbObj = DBManager()
        dbObj.addImageHistory(dogName: dogname, ownername: ownername ,dogDescription: dogdescription,dogImage :png)
         
-        //remove the text value after save
-      
-        dogNameTxt.text = ""
-        dogDescriptionTxt.text = ""
-        ownerNameTxt.text = ""
-        selectImg.image = nil
+        dismiss(animated: true, completion: nil)
         
     }
     
@@ -63,8 +56,16 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
         
        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
             actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
-            imagePicker.sourceType = .camera
-             self.present(imagePicker,animated: true,completion: nil)
+                
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                    imagePicker.sourceType = .camera
+                    self.present(imagePicker,animated: true,completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "Oops", message: "Camera not available", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+          
         }))
         
          actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {(action: UIAlertAction) in

@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Coredata_SampleUITests: XCTestCase {
+class AddDogListVCUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,23 +31,25 @@ class Coredata_SampleUITests: XCTestCase {
         let app = XCUIApplication()
         app.buttons["Add Dog"].tap()
         app.textFields["Dog Name"].tap()
-        
+
         let ownerTextField = app.textFields["Owner"]
         ownerTextField.tap()
         ownerTextField.tap()
-        
+
         let addABriefDogBioTextField = app.textFields["Add a brief dog bio"]
         addABriefDogBioTextField.tap()
         addABriefDogBioTextField.tap()
         app.buttons["Image"].tap()
         app.sheets["Photo Source"].buttons["Photo Library"].tap()
         XCUIApplication().buttons["Save"].tap()
-        
+
         let app1 = XCUIApplication()
         let element = app1.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element
         element.tap()
         element.tap()
         app1.buttons["Cancel"].tap()
+        
+   
     }
 
 }

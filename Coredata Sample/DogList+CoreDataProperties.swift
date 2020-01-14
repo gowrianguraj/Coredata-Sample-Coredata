@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension DogList {
 
     @nonobjc public class func createFetchRequest()-> NSFetchRequest<DogList> {
