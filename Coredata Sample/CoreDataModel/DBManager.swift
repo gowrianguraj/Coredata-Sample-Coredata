@@ -28,7 +28,7 @@ class DBManager {
         } catch {
             print(error.localizedDescription)
         }
-
+        
     }
 
 }

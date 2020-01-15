@@ -11,9 +11,9 @@ import UIKit
 class PopUpViewController: UIViewController {
     
     //MARK: - Properties
-    @IBOutlet weak var dogImg : UIImageView!
-    @IBOutlet weak var dogName : UILabel!
-    @IBOutlet weak var dogdescription : UILabel!
+    @IBOutlet weak var dogImg : UIImageView?
+    @IBOutlet weak var dogName : UILabel?
+    @IBOutlet weak var dogdescription : UILabel?
     
      var details : DogList?
 
@@ -32,8 +32,8 @@ class PopUpViewController: UIViewController {
     
     //MARK:- Update UI
     func setUpUI() {
-        dogName.text = details?.dogName
-        dogdescription.text = details?.dogDescription
+        dogName?.text = details?.dogName
+        dogdescription?.text = details?.dogDescription
         if let displayImg = details?.dogImage {
             dogImg?.image = UIImage(data: displayImg)
         }

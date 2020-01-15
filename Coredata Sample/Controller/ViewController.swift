@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     //MARK :- Properties
     @IBOutlet weak var tableView: UITableView!
     
-    var userArray :[DogList]! {
+    var userArray :[DogList]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView?.reloadData()
@@ -59,24 +59,28 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return userArray.count
+        return userArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let tablecell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        tablecell.userObj = (userArray[indexPath.row])
+        if let tablecell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell {
+        tablecell.userObj = (userArray?[indexPath.row])
         return tablecell
+      }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
-        popOverVC.details = (userArray[indexPath.row])
+        if let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as? PopUpViewController {
+        popOverVC.details = (userArray?[indexPath.row])
         self.addChild(popOverVC)
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParent: self)
+            
+        }
 
     }
 }

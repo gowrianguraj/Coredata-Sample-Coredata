@@ -10,15 +10,15 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lbldogName : UILabel!
-    @IBOutlet weak var lbldogDescription : UILabel!
-    @IBOutlet weak var tblImageUrl : UIImageView!
+    @IBOutlet weak var lbldogName : UILabel?
+    @IBOutlet weak var lbldogDescription : UILabel?
+    @IBOutlet weak var tblImageUrl : UIImageView?
     
-    var userObj : DogList! {
+    var userObj : DogList? {
         didSet {
-            lbldogName?.text = userObj.dogName
-            lbldogDescription?.text = userObj.dogDescription
-            if let displayImg = userObj.dogImage {
+            lbldogName?.text = userObj?.dogName
+            lbldogDescription?.text = userObj?.dogDescription
+            if let displayImg = userObj?.dogImage {
             tblImageUrl?.image = UIImage(data: displayImg)
         }
     }

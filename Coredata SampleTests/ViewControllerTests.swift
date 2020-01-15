@@ -18,10 +18,12 @@ class ViewControllerTests: XCTestCase {
     func testInitMyTableView() {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
         _  = vc.view
         vc.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: Bundle(for: UITableViewCell.classForCoder())), forCellReuseIdentifier: "cell")
         XCTAssertNotNil(vc.tableView)
+            
+        }
     }
 
     func testTableViewDatasource() {
@@ -30,9 +32,10 @@ class ViewControllerTests: XCTestCase {
 
     }
     func testTableViewCellForRowAtIndexPath() {
-       let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? CustomTableViewCell
-        XCTAssertEqual(cell?.lbldogName.text!, "puppy")
-        XCTAssertEqual(cell?.lbldogDescription.text!, "puppy is cute and active")
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? CustomTableViewCell {
+            XCTAssertEqual(cell.lbldogName?.text!, "puppy")
+            XCTAssertEqual(cell.lbldogDescription?.text!, "puppy is cute and active")
         }
+    }
     
 }

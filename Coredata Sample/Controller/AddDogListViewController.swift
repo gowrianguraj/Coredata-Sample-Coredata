@@ -13,10 +13,10 @@ class AddDogListViewController:
 UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     //MARK: - Properties
-    @IBOutlet weak var dogNameTxt : UITextField!
-    @IBOutlet weak var ownerNameTxt : UITextField!
-    @IBOutlet weak var dogDescriptionTxt : UITextField!
-    @IBOutlet weak var selectImg : UIImageView!
+    @IBOutlet weak var dogNameTxt : UITextField?
+    @IBOutlet weak var ownerNameTxt : UITextField?
+    @IBOutlet weak var dogDescriptionTxt : UITextField?
+    @IBOutlet weak var selectImg : UIImageView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +28,16 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
     // MARK: - Save the coredata values
     @IBAction func saveDog(_sender : UIButton) {
         
-        guard let dogname = dogNameTxt.text else {
+        guard let dogname = dogNameTxt?.text else {
                 return
         }
-        guard let ownername = ownerNameTxt.text else {
+        guard let ownername = ownerNameTxt?.text else {
             return
         }
-        guard let dogdescription = dogDescriptionTxt.text else {
+        guard let dogdescription = dogDescriptionTxt?.text else {
             return
         }
-        guard  let png = selectImg.image?.pngData() else {
+        guard  let png = selectImg?.image?.pngData() else {
             return
         }
         
@@ -80,7 +80,7 @@ UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate 
     //MARK: - PickerVC Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        selectImg.image = image
+        selectImg?.image = image
         picker.dismiss(animated: true, completion: nil)
     }
     
