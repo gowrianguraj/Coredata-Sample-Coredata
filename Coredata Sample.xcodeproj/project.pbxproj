@@ -170,7 +170,7 @@
 		5653704B23C8F11900466201 /* Coredata Sample */ = {
 			isa = PBXGroup;
 			children = (
-				566F803323C92DAE004271F9 /* ViewModel */,
+				566F803323C92DAE004271F9 /* Controller */,
 				566F803223C92D6E004271F9 /* Views */,
 				566F803123C92D50004271F9 /* CoreDataModel */,
 				5653704C23C8F11900466201 /* AppDelegate.swift */,
@@ -220,14 +220,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		566F803323C92DAE004271F9 /* ViewModel */ = {
+		566F803323C92DAE004271F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5653707D23C8F5EA00466201 /* AddDogListViewController.swift */,
 				5653704E23C8F11900466201 /* ViewController.swift */,
 				5616535F23CD130200713274 /* PopUpViewController.swift */,
 			);
-			path = ViewModel;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
